@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var runner: UIImageView!
+    var runnerPosition: CGPoint
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let myRunner = Runner()
+        print(myRunner.image)
+        print(myRunner.size)
+        
+        
+        //runnerPosition = runner.x
     }
+    
 
-
+    func moveRunner() {
+        runner.frame.offsetBy(dx: 1, dy: 0)
+    }
+    
+    
 }
 
